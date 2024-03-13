@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --font-family: "Times", sans-serif;
+  --second-family: "Lato", sans-serif;
+  --third-family: "Space Mono", sans-serif;
+  --font3: "Poppins", sans-serif;
+  --font4: "Avenir", sans-serif;
+  --font5: "Inter", sans-serif;
+  --font6: "Roboto Mono", sans-serif;
+  --font7: "Times New Roman", sans-serif;
+  --font8: "Helvetica", sans-serif;
+  --font9: "Work Sans", sans-serif;
+  --font10: "Bitter", sans-serif;
+  --font11: "Montserrat", sans-serif;
+  --font12: "Helvetica Neue", sans-serif;
+  --font13: "Proxima Nova", sans-serif;
+  --font14: "PT Serif", sans-serif;
+  --font15: "Playfair Display", sans-serif;
+  --font16: "Zilla Slab", sans-serif;
+}

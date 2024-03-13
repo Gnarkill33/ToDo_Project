@@ -1,0 +1,26 @@
+.task__wrap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #333;
+    border-radius: 16px;
+    width: 421px;
+    height: 112px;
+    backdrop-filter: blur(32px);
+}
+
+.task__text{
+    font-family: var(--font3);
+    font-weight: 400;
+    font-size: 16px;
+    color: #333;
+    margin: 29px 10px;
+    width: 300px;
+}
+
+.task__img{
+    width:90px;
+    height:90px;
+    margin:10px 25px;
+    background-color: #333;
+}

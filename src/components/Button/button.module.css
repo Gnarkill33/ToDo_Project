@@ -1,0 +1,11 @@
+.addButton{
+    border-radius: 40px;
+    padding: 24px 56px;
+    width: 200px;
+    height: 27px;
+    background: #437223;
+    font-family: var(--font3);
+    font-weight: 650;
+    font-size: 24px;
+    color: #fff;
+}
