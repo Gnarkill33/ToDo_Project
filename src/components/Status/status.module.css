@@ -1,0 +1,13 @@
+.status {
+    display:flex;
+    flex-direction: row;
+}
+
+.status__wrap {
+    display:flex;
+    flex-direction: column;
+}
+
+.status__line {
+    border: 1px solid black;
+}

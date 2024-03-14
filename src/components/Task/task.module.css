@@ -1,4 +1,4 @@
-.task__wrap{
+.task__wrap {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -9,7 +9,7 @@
     backdrop-filter: blur(32px);
 }
 
-.task__text{
+.task__text {
     font-family: var(--font3);
     font-weight: 400;
     font-size: 16px;
@@ -18,7 +18,7 @@
     width: 300px;
 }
 
-.task__img{
+.task__img {
     width:90px;
     height:90px;
     margin:10px 25px;

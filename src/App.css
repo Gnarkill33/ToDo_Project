@@ -1,18 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,17 +9,37 @@
   color: white;
 }
 
-.content{
-  width:822px;
-  height:573px;
+.content {
+  width: 670px;
+  height: 415px;
   background-color: #F2F2F2;
   border-radius: 0 0 250px 0;
+  padding: 60px 50px;
 }
 
-.title{
+.content__wrap {
+  width: 624px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.content__title {
   font-weight: 600;
   font-size: 56px;
   line-height: 129%;
   letter-spacing: 0.01em;
+  color: #333;
+}
+
+/* Проверить, почему не применяется */
+.content__title_big {
+  color: #437223;
+}
+
+.content__text{
+  font-family: var(--font3);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
   color: #333;
 }
