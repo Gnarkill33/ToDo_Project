@@ -25,15 +25,14 @@
 
 .content__title {
   font-weight: 600;
-  font-size: 56px;
+  font-size: 40px;
   line-height: 129%;
   letter-spacing: 0.01em;
-  color: #333;
+  color: var(--color-content-text);
 }
 
-/* Проверить, почему не применяется */
 .content__title_big {
-  color: #437223;
+  color: var(--color-button);
 }
 
 .content__text{
@@ -41,5 +40,5 @@
   font-weight: 400;
   font-size: 24px;
   line-height: 150%;
-  color: #333;
+  color: var(--color-content-text);
 }

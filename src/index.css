@@ -31,3 +31,9 @@ code {
   --font15: "Playfair Display", sans-serif;
   --font16: "Zilla Slab", sans-serif;
 }
+
+:root {
+  --color-content-text: #333;
+  --color-button: #437223;
+  --color-button-text: #F2F2F2;
+}
