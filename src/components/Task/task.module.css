@@ -2,11 +2,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    border: 1px solid var(--color-content-text);
+    border: 1.5px solid var(--color-content-text);
     border-radius: 16px;
     width: 421px;
     height: 112px;
     backdrop-filter: blur(32px);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);    
 }
 
 .task__text {
@@ -14,7 +15,7 @@
     font-weight: 400;
     font-size: 16px;
     color: var(--color-content-text);
-    margin: 29px 10px;
+    margin: 29px 15px;
     width: 300px;
 }
 
@@ -23,4 +24,9 @@
     height:90px;
     margin:10px 25px;
     background-color: var(--color-content-text);
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    display: block;
+    border-radius:50%;
 }

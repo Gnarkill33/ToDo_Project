@@ -34,6 +34,8 @@ code {
 
 :root {
   --color-content-text: #333;
-  --color-button: #437223;
+  --color-button: #5d9835;
   --color-button-text: #F2F2F2;
+  --color-background: #f2f2f3;
+  --color-basic: white;
 }

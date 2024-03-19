@@ -4,9 +4,9 @@ import Task from '../Task/Task.jsx'
 
 function List() {
   return (
-    <div className='list__wrap'>
+    <div className={styles.list__wrap}>
         {Records && Records.map((record) => 
-            <Task title={record.text} src={record.url} />
+            <Task text={record.text} src={record.url} />
         )
         }
     </div>
@@ -14,3 +14,5 @@ function List() {
 }
 
 export default List;
+
+
