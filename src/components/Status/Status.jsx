@@ -1,13 +1,12 @@
 import styles from './status.module.css';
 
-function Status({}) {
+function Status({ }) {
   return (
     <div className={styles.status}>
-        <div className={styles.status__wrap}>
-            <p className='status__count'>125</p>
-            <hr className={styles.status__line}/>
-            <p className='status__text'>Lorem ipsum dolor sit amet</p>
-        </div>  
+      <div className={styles.status__wrap}>
+        <p className={styles.status__count}>125</p>
+        <p className={styles.status__text}>Tasks done</p>
+      </div>
     </div>
   );
 }

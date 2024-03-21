@@ -1,6 +1,7 @@
 .list__wrap {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-evenly;
     margin-top: 3rem;
 }

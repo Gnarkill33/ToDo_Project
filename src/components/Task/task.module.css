@@ -1,13 +1,13 @@
 .task__wrap {
     display: flex;
-    flex-direction: row;
     align-items: center;
     border: 1.5px solid var(--color-content-text);
     border-radius: 16px;
     width: 421px;
     height: 112px;
     backdrop-filter: blur(32px);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);    
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); 
+    margin-left: 0px 10px;
 }
 
 .task__text {
@@ -20,13 +20,11 @@
 }
 
 .task__img {
-    width:90px;
-    height:90px;
-    margin:10px 25px;
+    width: 90px;
+    height: 90px;
+    margin: 10px 25px;
     background-color: var(--color-content-text);
-    width: 70px;
-    height: 70px;
     background-size: cover;
     display: block;
-    border-radius:50%;
+    border-radius: 50%;
 }

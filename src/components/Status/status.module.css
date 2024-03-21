@@ -1,6 +1,5 @@
 .status {
     display:flex;
-    flex-direction: row;
 }
 
 .status__wrap {
@@ -8,6 +7,16 @@
     flex-direction: column;
 }
 
-.status__line {
-    border: 1px solid black;
+.status__count {
+    border-bottom: 3px solid var(--color-content-text);
+    padding-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.status__text {
+    font-size: 24px;
+    font-weight: bold;
 }

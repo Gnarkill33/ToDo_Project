@@ -5,10 +5,10 @@ import Task from '../Task/Task.jsx'
 function List() {
   return (
     <div className={styles.list__wrap}>
-        {Records && Records.map((record) => 
-            <Task text={record.text} src={record.url} />
-        )
-        }
+      {Records && Records.map((record) =>
+        <Task text={record.text} src={record.url} />
+      )
+      }
     </div>
   );
 }
