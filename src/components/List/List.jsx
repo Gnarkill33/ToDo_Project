@@ -1,12 +1,12 @@
 import styles from './list.module.css';
-import Records from '../../records.json';
+// import Records from '../../records.json';
 import Task from '../Task/Task.jsx'
 
-function List() {
+function List({ toDos }) {
   return (
     <div className={styles.list__wrap}>
-      {Records && Records.map((record) =>
-        <Task text={record.text} src={record.url} />
+      {toDos && toDos.map((toDo, id) =>
+        <Task key={id} toDo={toDo} />
       )
       }
     </div>

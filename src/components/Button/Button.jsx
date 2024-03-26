@@ -1,9 +1,9 @@
 import styles from './button.module.css';
 
-function Button({name}) {
+function Button({ onCustomClick, name }) {
   return (
-    <div className={styles.addButton}>{name}
-      </div>   
+    <div onClick={onCustomClick} className={styles.addButton}>{name}
+    </div>
   );
 }
 
