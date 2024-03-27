@@ -7,6 +7,7 @@ function List({ toDos }) {
     <div className={styles.list__wrap}>
       {toDos && toDos.map((toDo, id) =>
         <Task key={id} toDo={toDo} />
+
       )
       }
     </div>

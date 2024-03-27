@@ -2,7 +2,6 @@ import './App.css';
 import Button from './components/Button/Button.jsx';
 import Status from './components/Status/Status.jsx';
 import List from './components/List/List.jsx';
-import Image from './assets/images/option4.jpg'
 import { useState } from "react";
 
 function App() {
@@ -20,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className='container'>
+      {/* <div className='container'> */}
     <div className='content'>
       <div className='content__wrap'>   
         <h1 className='content__title'>My tasks: <span className='content__title content__title_big'>TODO</span> List</h1> 
@@ -35,13 +34,9 @@ function App() {
 
         <Button onCustomClick={addToDo} name='Add new task'/>
         <Status/>
-    </div> 
-    </div>
-    <div className='image'>
-      {/* <img className='background-image' src={Image} alt="" /> */}
-    </div>
-    </div>
+      </div>
       <List toDos={toDos}/>
+    </div> 
     </div>
   );
 }

@@ -1,7 +1,8 @@
 body {
-  background-image: url('./assets/images/bloomscape_tough-stuff_collection__terracotta_crop0621-scaled-e1625248141897\ 1.svg');
+  background-image: url('./assets/images/New_Dentistry_plant_background-6949598.svg');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 
@@ -16,28 +17,31 @@ body {
   color: var(--color-basic);
 }
 
-.container {
+/* .container {
   display: flex;
-}
+} */
 
 .content {
   display: flex;
+  flex-direction: column;
   width: 670px;
-  height: 455px;
+  height: 28rem;
   background-color: var(--color-background);
-  padding: 40px;
+  padding: 15px 60px;
+  
 }
 
 .content__wrap {
-  width: 624px;
-  height: 400px;
+  width: 40rem;
+  height: 28rem;
   margin: 0 auto;
+  
 }
 
 .content__title {
   font-weight: 600;
   font-size: 40px;
-  line-height: 129%;
+  line-height: 110%;
   letter-spacing: 0.01em;
   color: var(--color-content-text);
 }
@@ -58,7 +62,7 @@ body {
   border-radius: 12px;
   backdrop-filter: blur(32px);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   margin-top: 20px;
   padding: 0 0.8em;
 }
