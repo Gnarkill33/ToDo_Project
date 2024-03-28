@@ -1,11 +1,12 @@
 import styles from './task.module.css'
 
-function Task({ toDo }) {
+function Task({ task, deleteOnClick }) {
+
   return (
     <div className={styles.task__wrap}>
-      <img className={styles.task__img} alt="#" />
       <input type="checkbox" />
-      <p className={styles.task__text}>{toDo}</p>
+      <p className={styles.task__text}>{task}</p>
+      <button onClick={deleteOnClick()}>Delete</button>
     </div>
   );
 }

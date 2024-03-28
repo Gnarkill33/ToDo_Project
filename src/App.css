@@ -17,10 +17,6 @@ body {
   color: var(--color-basic);
 }
 
-/* .container {
-  display: flex;
-} */
-
 .content {
   display: flex;
   flex-direction: column;
@@ -28,14 +24,13 @@ body {
   height: 28rem;
   background-color: var(--color-background);
   padding: 15px 60px;
-  
+  border-bottom-right-radius: 10rem;
 }
 
 .content__wrap {
   width: 40rem;
   height: 28rem;
   margin: 0 auto;
-  
 }
 
 .content__title {

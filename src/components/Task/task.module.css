@@ -3,28 +3,19 @@
     align-items: center;
     border: 1.5px solid var(--color-content-text);
     border-radius: 16px;
-    width: 421px;
-    height: 80px;
+    width: 26rem;
+    height: 5rem;
     backdrop-filter: blur(32px);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); 
     margin-left: 0px 10px;
+    padding: 0px 10px;
 }
 
 .task__text {
     font-family: var(--font3);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 22px;
     color: var(--color-content-text);
     margin: 29px 15px;
     width: 300px;
-}
-
-.task__img {
-    width: 90px;
-    height: 90px;
-    margin: 10px 25px;
-    background-color: var(--color-content-text);
-    background-size: cover;
-    display: block;
-    border-radius: 50%;
 }

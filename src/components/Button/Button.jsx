@@ -1,8 +1,8 @@
 import styles from './button.module.css';
 
-function Button({ onCustomClick, name }) {
+function Button({ addOnClick, name }) {
   return (
-    <div onClick={onCustomClick} className={styles.addButton}>{name}
+    <div onClick={addOnClick} className={styles.addButton}>{name}
     </div>
   );
 }
