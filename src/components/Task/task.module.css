@@ -19,3 +19,27 @@
     margin: 29px 15px;
     width: 300px;
 }
+
+.inputEdit {
+    width: 100%;
+}
+
+.buttonEdit {
+    background-image: url('../../assets/images/edit.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 2rem;
+    width: 2rem;
+    border: none
+}
+
+.buttonDelete {
+    background-image: url('../../assets/images/delete.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 2rem;
+    width: 2rem;
+    border: none
+}
