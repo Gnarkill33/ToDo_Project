@@ -1,7 +1,7 @@
 .task__wrap {
     display: flex;
     align-items: center;
-    border: 1.5px solid var(--color-content-text);
+    border: 1.5px solid var(--color-button);
     border-radius: 16px;
     width: 26rem;
     height: 5rem;
@@ -16,12 +16,29 @@
     font-weight: 400;
     font-size: 22px;
     color: var(--color-content-text);
-    margin: 29px 15px;
-    width: 300px;
+    margin: 29px 10px;
+    width: 27rem;
+}
+
+.task__text_checked {
+    font-family: var(--font3);
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--color-content-text);
+    margin: 29px 10px;
+    width: 27rem;
+    text-decoration: line-through;
+}
+
+.inputField {
+    transform: scale(2);
+    margin: 0px 15px;
 }
 
 .inputEdit {
     width: 100%;
+    font-size: 20px;
+    margin-right: 5px;
 }
 
 .buttonEdit {
@@ -30,8 +47,9 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 2rem;
-    width: 2rem;
-    border: none
+    width: 2.5rem;
+    border: none;
+    margin: 0px 10px 0px 10px;
 }
 
 .buttonDelete {
@@ -40,6 +58,17 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 2rem;
-    width: 2rem;
+    width: 2.5rem;
     border: none
+}
+
+.buttonSave {
+    background-image: url('../../assets/images/save.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 2rem;
+    width: 2.5rem;
+    border: none;
+    margin: 0px 10px 0px 10px;
 }

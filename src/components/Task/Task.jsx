@@ -1,23 +1,46 @@
 import { useState } from 'react';
 import styles from './task.module.css'
 
-function Task({ id, task, onDone }) {
+function Task({ task, onDone, subtractOnClick }) {
   const [editMode, setEditMode] = useState(false);
   const [checked, setChecked] = useState(false);
   const [value, setValue] = useState('');
 
-
   return (
-    <div className={styles.task__wrap}>
+    // При клике поле становится редактируемым
+    <div className={styles.task__wrap} onClick={() => { setEditMode(!editMode) }}>
 
-      <input type="checkbox" checked={checked} onChange={(event) => setChecked(event.target.checked)} /> {/* условный рендеринг для checked с функцией Delete*/}
+      <input className={styles.inputField} type="checkbox"
+        checked={checked}
+        onChange={(event) => {
+          setChecked(event.target.checked);
+          subtractOnClick();
+          setInterval(() => onDone(), 800);
+        }
+        } />
 
-      {editMode ? (<input className={styles.inputEdit} value={value} onChange={(event) => { setValue(event.target.value) }} />) : (<p className={styles.task__text}>{task}</p>)}
+      {/*Редактирование задачи*/}
+      {editMode
+        ? (<input className={styles.inputEdit} value={value} onChange={(event) => { setValue(event.target.value) }} />)
+        : (<p className={checked
+          ? styles.task__text_checked
+          : styles.task__text}>{task}</p>
+        )
+      }
 
-      <button onClick={() => { setEditMode(!editMode) }} className={styles.buttonEdit}></button>
+      {/*Кнопка Edit + Смена иконок кнопки на галочку (сохранить)*/}
+      <button onClick={() => { setEditMode(!editMode) }} className={editMode ? styles.buttonSave : styles.buttonEdit}></button>
 
-      <button onClick={() => { onDone(id) }} className={styles.buttonDelete}></button>
-    </div>
+      {/*Кнопка Delete с подтверждением*/}
+      <button onClick={() => {
+        if (window.confirm('Are you sure?')) {
+          onDone();
+          subtractOnClick();
+        }
+      }}
+        className={styles.buttonDelete}
+      ></button>
+    </div >
   );
 }
 

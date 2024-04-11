@@ -1,11 +1,11 @@
 import styles from './status.module.css';
 
-function Status({ }) {
+function Status({ counter }) {
   return (
     <div className={styles.status}>
       <div className={styles.status__wrap}>
-        <p className={styles.status__count}>125</p>
-        <p className={styles.status__text}>Tasks done</p>
+        <p className={styles.status__count}>{counter}</p>
+        <p className={styles.status__text}>New tasks</p>
       </div>
     </div>
   );
