@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './task.module.css'
 
-function Task({ task, onDone, onSubtractClick }) {
+function Task({ task, onDone, onSubtractClick, onClickSave, id }) {
   const [editMode, setEditMode] = useState(false);
   const [checked, setChecked] = useState(false);
   const [value, setValue] = useState(task);
@@ -20,7 +20,10 @@ function Task({ task, onDone, onSubtractClick }) {
 
       {/*Редактирование задачи*/}
       {editMode
-        ? (<input className={styles.inputEdit} value={value} onChange={(event) => { setValue(event.target.value) }} />)
+        ? (<input className={styles.inputEdit}
+          value={value}
+          onChange={(event) => { setValue(event.target.value) }}
+        />)
         : (<p
           onClick={() => { setEditMode(!editMode) }}
           className={checked
@@ -29,9 +32,11 @@ function Task({ task, onDone, onSubtractClick }) {
         </p>
         )
       }
-
       {editMode
-        ? <button
+        ? <button onClick={() => {
+          onClickSave(id, value);
+          setEditMode(false);
+        }}
           className={styles.buttonSave} >
         </button>
         : <button onClick={() => { setEditMode(!editMode) }}

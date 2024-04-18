@@ -20,6 +20,20 @@ function App() {
     }
   };
 
+  const saveTask = (id, value) => {
+    setTasks(
+      tasks.map((task, id) => {
+        if (task.id === id) {
+          return {
+            ...task,
+            title: value,
+          };
+        }
+        return task;
+      }),
+    );
+  };
+
   const subtractCounter = () => {
     if (counter > 0) {
       setCounter((prev) => prev - 1);
@@ -53,6 +67,7 @@ function App() {
           <Status counter={counter} />
         </div>
         <List
+          onClickSave={saveTask}
           deleteOnClick={deleteTask}
           onSubtractClick={subtractCounter}
           tasks={tasks}
