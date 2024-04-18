@@ -5,7 +5,7 @@ function Status({ counter }) {
     <div className={styles.status}>
       <div className={styles.status__wrap}>
         <p className={styles.status__count}>{counter}</p>
-        <p className={styles.status__text}>New tasks</p>
+        <p className={styles.status__text}>Tasks</p>
       </div>
     </div>
   );

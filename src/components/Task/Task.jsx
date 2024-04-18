@@ -1,41 +1,47 @@
 import { useState } from 'react';
 import styles from './task.module.css'
 
-function Task({ task, onDone, subtractOnClick }) {
+function Task({ task, onDone, onSubtractClick }) {
   const [editMode, setEditMode] = useState(false);
   const [checked, setChecked] = useState(false);
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState(task);
 
   return (
-    // При клике поле становится редактируемым
-    <div className={styles.task__wrap} onClick={() => { setEditMode(!editMode) }}>
+    <div className={styles.task__wrap}>
 
       <input className={styles.inputField} type="checkbox"
         checked={checked}
         onChange={(event) => {
           setChecked(event.target.checked);
-          subtractOnClick();
-          setInterval(() => onDone(), 800);
-        }
-        } />
+          onSubtractClick();
+          setTimeout(() => onDone(), 300);
+        }}
+      />
 
       {/*Редактирование задачи*/}
       {editMode
         ? (<input className={styles.inputEdit} value={value} onChange={(event) => { setValue(event.target.value) }} />)
-        : (<p className={checked
-          ? styles.task__text_checked
-          : styles.task__text}>{task}</p>
+        : (<p
+          onClick={() => { setEditMode(!editMode) }}
+          className={checked
+            ? styles.task__text_checked
+            : styles.task__text}>{task}
+        </p>
         )
       }
 
-      {/*Кнопка Edit + Смена иконок кнопки на галочку (сохранить)*/}
-      <button onClick={() => { setEditMode(!editMode) }} className={editMode ? styles.buttonSave : styles.buttonEdit}></button>
+      {editMode
+        ? <button
+          className={styles.buttonSave} >
+        </button>
+        : <button onClick={() => { setEditMode(!editMode) }}
+          className={styles.buttonEdit}>
+        </button>}
 
-      {/*Кнопка Delete с подтверждением*/}
       <button onClick={() => {
         if (window.confirm('Are you sure?')) {
           onDone();
-          subtractOnClick();
+          onSubtractClick();
         }
       }}
         className={styles.buttonDelete}
