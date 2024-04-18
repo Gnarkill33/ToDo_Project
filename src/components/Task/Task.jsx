@@ -1,23 +1,52 @@
 import { useState } from 'react';
 import styles from './task.module.css'
 
-function Task({ id, task, onDone }) {
+function Task({ task, onDone, onSubtractClick }) {
   const [editMode, setEditMode] = useState(false);
   const [checked, setChecked] = useState(false);
-  const [value, setValue] = useState('');
-
+  const [value, setValue] = useState(task);
 
   return (
     <div className={styles.task__wrap}>
 
-      <input type="checkbox" checked={checked} onChange={(event) => setChecked(event.target.checked)} /> {/* условный рендеринг для checked с функцией Delete*/}
+      <input className={styles.inputField} type="checkbox"
+        checked={checked}
+        onChange={(event) => {
+          setChecked(event.target.checked);
+          onSubtractClick();
+          setTimeout(() => onDone(), 300);
+        }}
+      />
 
-      {editMode ? (<input className={styles.inputEdit} value={value} onChange={(event) => { setValue(event.target.value) }} />) : (<p className={styles.task__text}>{task}</p>)}
+      {/*Редактирование задачи*/}
+      {editMode
+        ? (<input className={styles.inputEdit} value={value} onChange={(event) => { setValue(event.target.value) }} />)
+        : (<p
+          onClick={() => { setEditMode(!editMode) }}
+          className={checked
+            ? styles.task__text_checked
+            : styles.task__text}>{task}
+        </p>
+        )
+      }
 
-      <button onClick={() => { setEditMode(!editMode) }} className={styles.buttonEdit}></button>
+      {editMode
+        ? <button
+          className={styles.buttonSave} >
+        </button>
+        : <button onClick={() => { setEditMode(!editMode) }}
+          className={styles.buttonEdit}>
+        </button>}
 
-      <button onClick={() => { onDone(id) }} className={styles.buttonDelete}></button>
-    </div>
+      <button onClick={() => {
+        if (window.confirm('Are you sure?')) {
+          onDone();
+          onSubtractClick();
+        }
+      }}
+        className={styles.buttonDelete}
+      ></button>
+    </div >
   );
 }
 
