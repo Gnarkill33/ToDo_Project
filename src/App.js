@@ -21,8 +21,8 @@ function App() {
   };
 
   const saveTask = (id, value) => {
-    setTasks(
-      tasks.map((task, id) => {
+    setTasks((prev) =>
+      prev.map((task) => {
         if (task.id === id) {
           return {
             ...task,
