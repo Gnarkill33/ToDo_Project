@@ -4,6 +4,7 @@ import styles from './task.module.css'
 function Task({ task, onDone, onSubtractClick, onClickSave, id }) {
   const [editMode, setEditMode] = useState(false);
   const [checked, setChecked] = useState(false);
+  const [disabled, setDisabled] = useState(false);
   const [value, setValue] = useState(task);
   const inputFieldRef = useRef(null);
 
@@ -19,8 +20,10 @@ function Task({ task, onDone, onSubtractClick, onClickSave, id }) {
     <div className={styles.task__wrap}>
       <input className={styles.inputField} type="checkbox"
         checked={checked}
+        disabled={disabled}
         onChange={(event) => {
           setChecked(event.target.checked);
+          setDisabled(true);
           onSubtractClick();
           setTimeout(() => onDone(), 300);
         }}
