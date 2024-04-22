@@ -1,14 +1,22 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styles from './task.module.css'
 
 function Task({ task, onDone, onSubtractClick, onClickSave, id }) {
   const [editMode, setEditMode] = useState(false);
   const [checked, setChecked] = useState(false);
   const [value, setValue] = useState(task);
+  const inputFieldRef = useRef(null);
+
+
+  useEffect(() => {
+    if (editMode && inputFieldRef) {
+      inputFieldRef.current.focus();
+    }
+  }, [editMode]);
+
 
   return (
     <div className={styles.task__wrap}>
-
       <input className={styles.inputField} type="checkbox"
         checked={checked}
         onChange={(event) => {
@@ -23,6 +31,7 @@ function Task({ task, onDone, onSubtractClick, onClickSave, id }) {
         ? (<input className={styles.inputEdit}
           value={value}
           onChange={(event) => { setValue(event.target.value) }}
+          ref={inputFieldRef}
         />)
         : (<p
           onClick={() => { setEditMode(!editMode) }}
