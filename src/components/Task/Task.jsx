@@ -10,7 +10,7 @@ function Task({ task, onDone, onSubtractClick, onClickSave, id }) {
 
 
   useEffect(() => {
-    if (editMode && inputFieldRef) {
+    if (editMode && inputFieldRef.current) {
       inputFieldRef.current.focus();
     }
   }, [editMode]);
