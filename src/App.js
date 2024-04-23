@@ -50,7 +50,11 @@ function App() {
         <div className="content__wrap">
           <h1 className="content__title">
             My tasks:
-            <span className="content__title content__title_big">TODO</span> List
+            <span className="content__title content__title_big">
+              {' '}
+              TODO
+            </span>{' '}
+            List
           </h1>
           <input
             onChange={(event) => {
