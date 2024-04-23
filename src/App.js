@@ -62,6 +62,7 @@ function App() {
             className="content__text"
             placeholder="Write your task..."
             value={newTask.title}
+            autoFocus
           ></input>
           <Button addOnClick={addTask} name="Add new task" />
           <Status counter={counter} />
